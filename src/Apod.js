@@ -1,4 +1,23 @@
 import React from "react";
+import styled from "styled-components";
+
+const Baslik = styled.h2`
+    color: green;
+    font-size: 24px;
+`;
+
+const Date = styled.div`
+    font-style: italic;
+    color: #555;
+    font-weight: bold;
+`;
+
+const BaslikKutusu = styled.div`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+`;
+
 
 function Apod({dopa}){
 
@@ -10,8 +29,10 @@ function Apod({dopa}){
             <img src={url} alt={`A visual of the day - ${date}`}/>
            </div>
            <div className="photo-info">
-            <h2>{title}</h2>
-            <div>{date}</div>
+            <BaslikKutusu>
+            <Baslik>{title}</Baslik>
+            <Date>{date}</Date>
+            </BaslikKutusu>
             <p>{explanation}</p>
             </div>
          </div>
